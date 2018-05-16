@@ -1,0 +1,82 @@
+body{
+
+
+}
+
+
+/*.header_1{
+
+	background: #ffffff;
+    height: 120px;
+    margin: 0px 0px 0px 0px;
+    transition-duration: 0.2s;
+    box-shadow: 0 3px 3px 0 rgba(128, 128, 128, 0.29);
+}*/
+
+.head_title_name{
+
+	color: black;
+    letter-spacing: 4px;
+    padding: 29px 0px 0px 15px;
+}
+
+
+.sing_log{
+
+	float: right;
+    margin: -108px 26px 0px 0px;
+}
+
+.singBtn{
+
+	background: #F68B1E;
+    width: 104px;
+    height: 43px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 0px 10px 10px 10px;
+    border: 0px;
+}
+
+
+.logBtn{
+
+	background: #F68B1E;
+    width: 104px;
+    height: 43px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 0px 10px 0px 10px;
+    border: 0px;
+}
+
+
+.icon_div{
+	width: 60px;
+    height: 60px;
+    /*margin: -80px 11px -78px 15px;*/
+}
+
+
+.icon_design{
+	width: 60px;
+    height: 60px;
+    margin: 3px 0px 0px 18px;
+}
+
+.logo_name{
+	font-size: 0.5cm;
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: #F68B1E;
+    padding: 0px 0px 0px 19px;
+}
+
+.nav_menu{
+	margin: 20px 0px 0px 0px;
+}
+
+/*
+.footer_content{
+        margin: 20px 0px 0px 0px;
+}*/

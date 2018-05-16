@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this is home page</title>
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/company_list_2.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main_css.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main_slider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/footer_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/summery_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/review_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user_profile.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/secend.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<!--<div class="sticky" style="position: -webkit-sticky; position: sticky; top: 0;">-->
+<div class="header_1" >
+<nav class="navbar navbar-inverse" style="background-color: #0d3244;border-color: #0d3244;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#"><img src="{% static 'img/data3.png' %}" style="width: 40px" height="30px"></a>-->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" style="background-color: #0d3244; color:#fff ">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {%if not user.is_authenticated%}
+        <li><a href="/client/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {%endif%}
+        {%if user.is_authenticated%}
+        <li><a href="/client/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+        {%endif%}
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+<!--</div>-->
+
+{% block content %}
+
+{% endblock %}
+
+<div class="footer_content" <!--style="margin:2000px 0px 0px 0px;"-->>
+	<!-- FOOTER START -->
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>Company</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Products</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Accounts</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Resources</h1>
+    <ul>
+      <li>Webmail</li>
+      <li>Redeem code</li>
+      <li>WHOIS lookup</li>
+      <li>Site map</li>
+      <li>Web templates</li>
+      <li>Email templates</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Support</h1>
+    <ul>
+      <li>Contact us</li>
+      <li>Web chat</li>
+      <li>Open ticket</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <h1>Social</h1>
+    <ul>
+      <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
+      <li><img src="https://svgshare.com/i/5eA.svg" width="32" style="width: 32px;"></li>
+      <li><img src="https://svgshare.com/i/5f_.svg" width="32" style="width: 32px;"></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+</div>
+<!-- END OF FOOTER -->
+</div>
+
+</body>
+</html>

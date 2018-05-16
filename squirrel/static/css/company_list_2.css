@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    max-width: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 60px;
+    white-space: pre-wrap;
+	
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #FF9800;
+    color: #4c4444;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.summery{
+	white-space: pre-wrap;
+	height: 50px;
+}
+
+.com_rating{
+	font-size: 40px;
+    color: #FF9800;
+}

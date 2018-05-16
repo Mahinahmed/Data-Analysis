@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head>
+	{% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/user_profile.css' %}">
+</head>
+<body>
+<div class="Full_user_profile">
+<div class="container_user">
+	<div class="innerwrap">
+		<section class="section1 clearfix">
+			<div>
+				<div class="row grid clearfix">
+					<div class="col2 first">
+						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
+						<h1>{{client.full_name}}</h1>
+						<p>{{client.username}}</p>
+						<p>{{client.email}}</p>
+						<!--<p>Address: Feni Bangladesh</p>-->
+						<!--<span>Follow</span>-->
+					</div>
+					<!--<div class="col2 last">-->
+						<!--<div class="grid clearfix">-->
+							<!--<div class="col3 first">-->
+								<!--<h1>694</h1>-->
+								<!--<span>Following</span>-->
+							<!--</div>-->
+							<!--<div class="col3"><h1>452</h1>-->
+							<!--<span>Likes</span></div>-->
+							<!--<div class="col3 last"><h1>1207</h1>-->
+							<!--<span>Bookmarks</span></div>-->
+						<!--</div>-->
+					<!--</div>-->
+				</div>
+				<div class="row clearfix">
+					<ul class="row2tab clearfix">
+						<li><i class="fa fa-list-alt"></i> Past Activity </li>
+						<li><i class="fa fa-linkedin-square"></i>My linkedIn</li>
+						<li><i class="fa fa-facebook"></i> My Facebook </li>
+						<li><i class="fa fa-github"></i> My Github </li>
+					</ul>
+				</div>
+			</div>
+			<span class="smalltri">
+
+			<i class="fa fa-star"></i>
+			</span>
+		</section>
+<div class = "full_table">
+		<table>
+  <thead>
+    <tr>
+      <th>Date & Time</th>
+      <th>Reviews</th>
+      <th>Company's</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>IBCS PrimaX</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>IBCS PrimaX</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>IBCS PrimaX</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>IBCS PrimaX</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>The width that the data will be truncated to - <em>('auto' or px amount)</em></td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>Set to true to enable the ellipsis</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span>
+	  </td>
+      <td>Set to true to show the full data on hover</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>The callback fired after the show/reveal</td>
+    </tr>
+    <tr>
+      <td><strong>2015-04-28</strong></td>
+      <td><span class="fa fa-star checked">
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      <td>The callback fired after the hide/conceal</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+	</div>
+</div>
+
+</div>
+</body>
+
+
+</html>
+{% endblock content %}

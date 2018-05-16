@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
+
+</head>
+<body>
+	  <div id="overlay"></div>
+<div class="loginbox">
+    {% if error %}
+    <p>
+        {{error}}
+    </p>
+    {% endif%}
+    {% if success %}
+    <p>
+        {{success}}
+    </p>
+    {% endif%}
+  <h1>Sign in</h1><br>
+  <form method="post" action=".">
+      {%csrf_token%}
+
+      <input name="full_name" placeholder="Full Name">
+      <input name="username" placeholder="Username">
+      <input name="email" placeholder="Email">
+      <input name="password" type="password" placeholder="Password">
+      <input name="confirm_password" type="password" placeholder="Retype Password">
+    <input type="submit" value="LOGIN">
+  </form>
+  <a href="#">Forgot Password?</a><br>
+  <span id="text-account">Don't have an account?</span><a id="create-account" href="#"> Create here.</a>
+</div>
+</body>
+</html>

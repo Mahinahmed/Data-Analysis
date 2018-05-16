@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles%}
+
+
+<head>
+  <title>All company list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flipp").click(function(){
+        $("#panell").slideToggle("slow");
+    });
+});
+</script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+    #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px #ddd;
+
+    font-size: 24px!important;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+#panell, #flipp {
+        padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px #ddd;
+
+    font-size: 24px!important;
+}
+
+#panell {
+    padding: 50px;
+    display: none;
+}
+
+.maindivs{
+
+  border-style: outset;
+  margin: 25px 0px 0px 0px;
+}
+
+.imgstyle{
+    width: 90px;
+    height: 60px;
+    float: right;
+    margin: -17px 0px 0px 0px;
+}
+.uldesign{
+     <!--float: right;-->
+    font-size: 14px;
+    line-height: 3px;
+    color: #9E9E9E;
+    /*margin: -79px 0px 0px 0px;*/
+}
+.deatils{
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+    font-weight: lighter;
+}
+h5{
+  font-weight: 700;
+}
+
+  </style>
+</head>
+<div class="container-fluid text-center">
+  <div class="row ">
+    <div class="col-sm-2 " style="
+                    text-align:left;
+                    color: #fff;
+                    background: rgb(8, 80, 103);
+                    border-style: solid solid solid;
+                    border-color: rgba(255, 255, 255, 0.17) rgba(255, 255, 255, 0.17) rgba(255, 255, 255, 0.17);
+                    ">
+      <h5 style="font-weight: 700;border-style: inset;padding: 8% 0% 8% 1%;">IT Company in Bangladesh</h5>
+      {%for company in it_companies %}
+      <p><a href="{% url 'company-details' company.pk %}" style="color:#fff;">{{company.name}}</a></p>
+      {%endfor%}
+        <h5 style="font-weight: 700;border-style: inset;padding: 8% 0% 8% 1%;">Clothing Brand Ltd</h5>
+
+        {%for company in clothing_companies %}
+      <p><a href="{% url 'company-details' company.pk %}" style="color: #fff;">{{company.name}}</a></p>
+      {%endfor%}
+
+
+    </div>
+    <div class="col-sm-8 <!--text-left"-->>
+       <!--<h3>List of Top Leding Company </h3>-->
+
+<!-- **********************************Company all list************************************** -->
+
+
+        {%for company in companies%}
+
+
+       <div class="maindivs">
+            <!--<div id="flip"> {{company.name}}</div>-->
+            <!--<div id="panel">
+                <img src="{% static 'img/data2.png' %}" class="imgstyle">
+                <div class="uldesign">
+                  <ul>{{company.name}}</ul>
+                  <ul>{{company.address}}</ul>
+                  <ul>{{company.email}}</ul>
+                  <ul>{{company.phone}}</ul>
+                </div>
+              </div>-->
+              <div class="deatils" style="font-size: 15px;margin: 3px 10px;  font-family: serif;color: #333c34;font-weight: 500;">
+                   {{company.overview}}
+                 <a class="navbar-brand" href="#"><img src="{% static 'img/pandas/logo2.png' %}" style="width: 45px;margin: 14px 0px -55px -19px;height: 40px;" height="30px"></a>
+             </div>
+                <a href="/companies/details/{{company.pk}}"><input type="button" value="More Details"  style="color: #fff;background: #05887a;border: 8px solid;padding: 5px 10px 5px 10px;font-family: important; margin: 0px 0px 0px -699px;"></input></a>
+                <div id="flip" style="text-align:  left;font-size: 18px!important;color: #000202;font-family: 'Lucida Sans', Arial, sans-serif;"> {{company.name}}</div>
+             </div>
+           {%endfor%}
+         </div>
+    </div>
+       <!--<div class="col-sm-2 sidenav">
+         <div class="well">
+          <img src="{% static 'img/add/ad1.png' %}" style="width: 150px; height: 450px">
+       </div>
+      </div>-->
+    </div>
+</div>
+<br>
+
+{% endblock content %}
